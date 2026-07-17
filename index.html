@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KOBRA-MPC</title>
+  <meta name="description"
+    content="KOBRA-MPC: trajectory-tracking experiments comparing GMPC, NMPC, and KOBRA-MPC on indoor and outdoor trajectories.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>KOBRA-MPC</h1>
+      <p class="tagline">Convex MPC for Wheeled Mobile Robots via Analytical Koopman Bilinearization</p>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <a href="#indoor">Indoor Experiments</a>
+    <a href="#outdoor">Outdoor Experiments</a>
+  </nav>
+
+  <main>
+
+    <p class="speed-note">Videos are played at an enhanced speed for a better viewing experience.</p>
+
+    <section id="indoor" class="experiment-section">
+      <h2>Indoor Experiments</h2>
+
+      <article class="traj-group">
+        <div class="traj-header">
+          <h3>Butterfly Trajectory</h3>
+          <button class="play-traj-btn" data-target="indoor-butterfly" type="button">
+            <span class="play-icon">&#9654;</span> Play All
+          </button>
+        </div>
+        <div class="video-row" id="indoor-butterfly">
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/kobra_mpc_butterfly.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>KOBRA-MPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/gmpc_butterfly.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>GMPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/nmpc_butterfly.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>NMPC</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="traj-group">
+        <div class="traj-header">
+          <h3>Five-Lobe Trajectory</h3>
+          <button class="play-traj-btn" data-target="indoor-five-lobe" type="button">
+            <span class="play-icon">&#9654;</span> Play All
+          </button>
+        </div>
+        <div class="video-row" id="indoor-five-lobe">
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/kobra_mpc_five_lob.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>KOBRA-MPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/gmpc_five_lob.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>GMPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/nmpc_five_lob.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>NMPC</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="traj-group">
+        <div class="traj-header">
+          <h3>Lemniscate Trajectory</h3>
+          <button class="play-traj-btn" data-target="indoor-lemniscate" type="button">
+            <span class="play-icon">&#9654;</span> Play All
+          </button>
+        </div>
+        <div class="video-row" id="indoor-lemniscate">
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/kobra_mpc_lemniscate.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>KOBRA-MPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/gmpc_lemniscate.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>GMPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/nmpc_lemniscate.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>NMPC</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="outdoor" class="experiment-section">
+      <h2>Outdoor Experiments</h2>
+
+      <article class="traj-group">
+        <div class="traj-header">
+          <h3>Lemniscate Trajectory</h3>
+          <button class="play-traj-btn" data-target="outdoor-lemniscate" type="button">
+            <span class="play-icon">&#9654;</span> Play All
+          </button>
+        </div>
+        <div class="video-row" id="outdoor-lemniscate">
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/kobra_mpc_lemniscate_outdoor.mp4" loop muted
+                playsinline preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>KOBRA-MPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/gmpc_lemniscate_outdoor.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>GMPC</figcaption>
+          </figure>
+          <figure class="video-card">
+            <div class="video-wrap">
+              <video class="fast-video" src="media/exp_videos/nmpc_lemniscate_outdoor.mp4" loop muted playsinline
+                preload="metadata"></video>
+              <div class="video-controls">
+                <input class="ctrl-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek">
+                <div class="ctrl-buttons">
+                  <button class="ctrl-btn ctrl-play-pause" type="button" aria-label="Play or pause">&#9654;</button>
+                  <button class="ctrl-btn ctrl-restart" type="button" aria-label="Restart">&#8635;</button>
+                </div>
+              </div>
+            </div>
+            <figcaption>NMPC</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>KOBRA-MPC</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
